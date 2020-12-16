@@ -9,7 +9,7 @@ Generating a square wordcloud from the US constitution using default arguments.
 import os
 
 from os import path
-from wordcloud import WordCloud
+from textcloud import TextCloud
 
 # get data directory (using getcwd() is needed to support running example in generated IPython notebook)
 d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
@@ -18,7 +18,7 @@ d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
 text = open(path.join(d, 'constitution.txt')).read()
 
 # Generate a word cloud image
-wordcloud = WordCloud().generate(text)
+wordcloud = TextCloud().generate(text)
 
 # Display the generated image:
 # the matplotlib way:
@@ -27,7 +27,7 @@ plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
 
 # lower max_font_size
-wordcloud = WordCloud(max_font_size=40).generate(text)
+wordcloud = TextCloud(max_font_size=40).generate(text)
 plt.figure()
 plt.imshow(wordcloud, interpolation="bilinear")
 plt.axis("off")

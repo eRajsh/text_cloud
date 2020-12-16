@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 import os
 # jieba.load_userdict("txt\userdict.txt")
 # add userdict by load_userdict()
-from wordcloud import WordCloud, ImageColorGenerator
+from textcloud import TextCloud, ImageColorGenerator
 
 # get data directory (using getcwd() is needed to support running example in generated IPython notebook)
 d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
@@ -63,8 +63,8 @@ def jieba_processing_txt(text):
     return ' '.join(mywordlist)
 
 
-wc = WordCloud(font_path=font_path, background_color="white", max_words=2000, mask=back_coloring,
-               max_font_size=100, random_state=42, width=1000, height=860, margin=2,)
+wc = TextCloud(font_path=font_path, background_color="white", max_words=2000, mask=back_coloring,
+               max_font_size=100, random_state=42, width=1000, height=860, margin=2, )
 
 
 wc.generate(jieba_processing_txt(text))

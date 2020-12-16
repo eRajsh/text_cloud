@@ -7,7 +7,7 @@ Generating a word cloud that assigns colors to words based on
 a predefined mapping from colors to words
 """
 
-from wordcloud import (WordCloud, get_single_color_func)
+from textcloud import (TextCloud, get_single_color_func)
 import matplotlib.pyplot as plt
 
 
@@ -96,7 +96,7 @@ If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!"""
 
 # Since the text is small collocations are turned off and text is lower-cased
-wc = WordCloud(collocations=False).generate(text.lower())
+wc = TextCloud(collocations=False).generate(text.lower())
 
 color_to_words = {
     # words below will be colored with a green single color function

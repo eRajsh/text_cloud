@@ -14,7 +14,7 @@ pip install python-bidi arabic_reshape
 
 import os
 import codecs
-from wordcloud import WordCloud
+from textcloud import TextCloud
 import arabic_reshaper
 from bidi.algorithm import get_display
 
@@ -29,7 +29,7 @@ text = arabic_reshaper.reshape(f.read())
 text = get_display(text)
 
 # Generate a word cloud image
-wordcloud = WordCloud(font_path='fonts/NotoNaskhArabic/NotoNaskhArabic-Regular.ttf').generate(text)
+wordcloud = TextCloud(font_path='fonts/NotoNaskhArabic/NotoNaskhArabic-Regular.ttf').generate(text)
 
 # Export to an image
 wordcloud.to_file("arabic_example.png")

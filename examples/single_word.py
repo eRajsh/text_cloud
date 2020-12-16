@@ -7,7 +7,7 @@ Make a word cloud with a single word that's repeated.
 
 import numpy as np
 import matplotlib.pyplot as plt
-from wordcloud import WordCloud
+from textcloud import TextCloud
 
 text = "square"
 
@@ -17,7 +17,7 @@ mask = (x - 150) ** 2 + (y - 150) ** 2 > 130 ** 2
 mask = 255 * mask.astype(int)
 
 
-wc = WordCloud(background_color="white", repeat=True, mask=mask)
+wc = TextCloud(background_color="white", repeat=True, mask=mask)
 wc.generate(text)
 
 plt.axis("off")

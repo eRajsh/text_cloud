@@ -12,7 +12,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 
-from wordcloud import WordCloud, STOPWORDS
+from textcloud import TextCloud, STOPWORDS
 
 # get data directory (using getcwd() is needed to support running example in generated IPython notebook)
 d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
@@ -28,7 +28,7 @@ alice_mask = np.array(Image.open(path.join(d, "alice_mask.png")))
 stopwords = set(STOPWORDS)
 stopwords.add("said")
 
-wc = WordCloud(background_color="white", max_words=2000, mask=alice_mask,
+wc = TextCloud(background_color="white", max_words=2000, mask=alice_mask,
                stopwords=stopwords, contour_width=3, contour_color='steelblue')
 
 # generate word cloud

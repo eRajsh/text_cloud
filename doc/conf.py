@@ -17,7 +17,7 @@ import os
 
 from datetime import date
 
-import wordcloud
+import textcloud
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -84,9 +84,9 @@ sphinx_gallery_conf = {
 # built documents.
 #
 # The short X.Y version.
-version = wordcloud.__version__
+version = textcloud.__version__
 # The full version, including alpha/beta/rc tags.
-release = wordcloud.__version__
+release = textcloud.__version__
 
 
 # List of patterns, relative to source directory, that match files and

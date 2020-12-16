@@ -21,7 +21,7 @@ if __name__ == '__main__':  # pragma: no cover
 import io
 import re
 import argparse
-import wordcloud as wc
+import textcloud as wc
 import numpy as np
 from PIL import Image
 
@@ -86,7 +86,7 @@ class RegExpAction(argparse.Action):
 
 
 def main(args, text, imagefile):
-    wordcloud = wc.WordCloud(**args)
+    wordcloud = wc.TextCloud(**args)
     wordcloud.generate(text)
     image = wordcloud.to_image()
 

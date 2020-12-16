@@ -4,8 +4,8 @@ import subprocess
 import sys
 from collections import namedtuple
 
-import wordcloud as wc
-from wordcloud import wordcloud_cli as cli
+import textcloud as wc
+from textcloud import textcloud_cli as cli
 
 from mock import patch
 import pytest

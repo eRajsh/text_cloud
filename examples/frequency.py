@@ -13,7 +13,7 @@ import os
 import re
 from PIL import Image
 from os import path
-from wordcloud import WordCloud
+from textcloud import TextCloud
 import matplotlib.pyplot as plt
 
 
@@ -35,7 +35,7 @@ def getFrequencyDictForText(sentence):
 def makeImage(text):
     alice_mask = np.array(Image.open("alice_mask.png"))
 
-    wc = WordCloud(background_color="white", max_words=1000, mask=alice_mask)
+    wc = TextCloud(background_color="white", max_words=1000, mask=alice_mask)
     # generate word cloud
     wc.generate_from_frequencies(text)
 

@@ -13,7 +13,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.ndimage import gaussian_gradient_magnitude
 
-from wordcloud import WordCloud, ImageColorGenerator
+from textcloud import TextCloud, ImageColorGenerator
 
 # get data directory (using getcwd() is needed to support running example in generated IPython notebook)
 d = os.path.dirname(__file__) if "__file__" in locals() else os.getcwd()
@@ -38,7 +38,7 @@ parrot_mask[edges > .08] = 255
 # create wordcloud. A bit sluggish, you can subsample more strongly for quicker rendering
 # relative_scaling=0 means the frequencies in the data are reflected less
 # acurately but it makes a better picture
-wc = WordCloud(max_words=2000, mask=parrot_mask, max_font_size=40, random_state=42, relative_scaling=0)
+wc = TextCloud(max_words=2000, mask=parrot_mask, max_font_size=40, random_state=42, relative_scaling=0)
 
 # generate word cloud
 wc.generate(text)

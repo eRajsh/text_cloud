@@ -21,8 +21,8 @@ Usage:
 
 import sys
 
-from .wordcloud_cli import main as wordcloud_cli_main
-from .wordcloud_cli import parse_args as wordcloud_cli_parse_args
+from .textcloud_cli import main as wordcloud_cli_main
+from .textcloud_cli import parse_args as wordcloud_cli_parse_args
 
 
 def main():

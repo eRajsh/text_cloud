@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 import os
 import random
 
-from wordcloud import WordCloud, STOPWORDS
+from textcloud import TextCloud, STOPWORDS
 
 
 def grey_color_func(word, font_size, position, orientation, random_state=None,
@@ -42,7 +42,7 @@ stopwords = set(STOPWORDS)
 stopwords.add("int")
 stopwords.add("ext")
 
-wc = WordCloud(max_words=1000, mask=mask, stopwords=stopwords, margin=10,
+wc = TextCloud(max_words=1000, mask=mask, stopwords=stopwords, margin=10,
                random_state=1).generate(text)
 # store default colored image
 default_colors = wc.to_array()

@@ -31,7 +31,7 @@ from .query_integral_image import query_integral_image
 from .tokenization import unigrams_and_bigrams, process_tokens
 
 FILE = os.path.dirname(__file__)
-FONT_PATH = os.environ.get('FONT_PATH', os.path.join(FILE, 'DroidSansMono.ttf'))
+FONT_PATH = os.environ.get('FONT_PATH', os.path.join(FILE, 'MuseoModerno-SemiBold.ttf'))
 STOPWORDS = set(map(str.strip, open(os.path.join(FILE, 'stopwords')).readlines()))
 
 
@@ -98,7 +98,7 @@ class colormap_color_func(object):
 
     Example
     -------
-    >>> WordCloud(color_func=colormap_color_func("magma"))
+    >>> TextCloud(color_func=colormap_color_func("magma"))
 
     """
     def __init__(self, colormap):
@@ -151,7 +151,7 @@ def get_single_color_func(color):
     return single_color_func
 
 
-class WordCloud(object):
+class TextCloud(object):
     r"""Word cloud object for generating and drawing.
 
     Parameters

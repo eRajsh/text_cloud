@@ -18,7 +18,7 @@ import io
 import os
 import string
 from os import path
-from wordcloud import WordCloud
+from textcloud import TextCloud
 
 # get data directory (using getcwd() is needed to support running example in generated IPython notebook)
 d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
@@ -39,7 +39,7 @@ regexp = r"{normal_word}|{ascii_art}|{emoji}".format(normal_word=normal_word, as
 # Generate a word cloud image
 # The Symbola font includes most emoji
 font_path = path.join(d, 'fonts', 'Symbola', 'Symbola.ttf')
-wc = WordCloud(font_path=font_path, regexp=regexp).generate(text)
+wc = TextCloud(font_path=font_path, regexp=regexp).generate(text)
 
 # Display the generated image:
 # the matplotlib way:
