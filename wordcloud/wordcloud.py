@@ -610,8 +610,8 @@ class WordCloud(object):
         -------
         self
         """
-        words = self.process_text(text)
-        self.generate_from_frequencies(words)
+        #words = self.process_text(text)
+        self.generate_from_frequencies(text)
         return self
 
     def generate(self, text):
