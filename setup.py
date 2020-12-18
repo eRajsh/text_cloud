@@ -10,7 +10,7 @@ setup(
     author="Rajesh Prabhu",
     author_email="",
     name='textcloud',
-    version='0.0.1',
+    version='0.0.2',
     cmdclass=versioneer.get_cmdclass(),
     url='https://github.com/eRajsh/text_cloud',
     description="A little text cloud generator, based on AMueller's excellent word cloud",
