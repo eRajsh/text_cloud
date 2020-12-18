@@ -17,7 +17,7 @@
 word_cloud
 ==========
 
-A little word cloud generator in Python. Read more about it on the [blog
+A little text cloud generator in Python, that generates a cloud of sentences from a list of sentences given as ain input. This is based on the nifty package from AMueller's, the wordcloud. Read more about the wordcloud package on the [blog
 post][blog-post] or the [website][website].
 
 The code is tested against Python 2.7, 3.4, 3.5, 3.6 and 3.7.
