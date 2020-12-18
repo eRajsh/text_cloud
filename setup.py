@@ -11,7 +11,7 @@ setup(
     author_email="",
     name='textcloud',
     version='0.0.1',
-    cmdclass='',
+    cmdclass=versioneer.get_cmdclass(),
     url='https://github.com/eRajsh/text_cloud',
     description="A little text cloud generator, based on AMueller's excellent word cloud",
     long_description=readme,
